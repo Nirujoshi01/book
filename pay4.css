@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  background: #2F4150;
+  margin: 0 10px;
+}
+
+.payment{
+  background: #f8f8f8;
+  max-width: 360px;
+  margin: 80px auto;
+  height: auto;
+  padding: 35px;
+  padding-top: 70px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.payment h2{
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  color: #0d3c61;
+}
+
+.payment h1{
+    color: #d30707;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+.form .label{
+  display: block;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+.input{
+  padding: 13px 0px 13px 25px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  outline: none;
+  font-size: 16px;
+  color: #555555;
+}
+
+.card-grp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item{
+  width: 48%;
+}
+
+.space{
+  margin-bottom: 20px;
+}
+
+.icon-relative{
+  position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far{
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  font-size: 20px;
+  color: #555555;
+}
+
+.btn{
+  align-items: center;
+  margin-top: 0px;
+  background: #2196F3;
+  padding: 12px;
+  text-align: center;
+  color: #f8f8f8;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 280px;
+}
+
+
+.payment-logo{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background: #f8f8f8;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  text-align: center;
+  line-height: 85px;
+}
+
+.payment-logo:before{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 90px;
+  height: 90px;
+  background: #050d14;
+  border-radius: 50%;
+}
+
+.payment-logo p{
+  position: relative;
+  color: #f8f8f8;
+  font-family: 'Baloo Bhaijaan', cursive;
+  font-size: 58px;
+}
+
+
+@media screen and (max-width: 420px){
+  .card-grp{
+    flex-direction: column;
+  }
+  .card-item{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .btn{
+    margin-top: 20px;
+  }
+}
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+.center {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.popup {
+  width:350px;
+  height:550px;
+  padding:30px 20px;
+  background:#f5f5f5;
+  border-radius:10px;
+  box-sizing:border-box;
+  z-index:2;
+  text-align:center;
+  opacity:0;
+  top:-200%;
+  transform:translate(-50%,-50%) scale(0.5);
+  transition: opacity 300ms ease-in-out,
+              top 1000ms ease-in-out,
+              transform 1000ms ease-in-out;
+}
+.popup.active {
+  opacity:1;
+  top: 60%;
+  transform:translate(-50%,-50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+}
+.Thanks .popup .icon {
+  margin:5px 0px;
+  width:50px;
+  height:50px;
+  border:2px solid #34f234;
+  text-align:center;
+  display:inline-block;
+  border-radius:50%;
+  line-height:60px;
+}
+.popup .icon i.fa {
+  font-size:30px;
+  color:#34f234;
+} 
+.popup .title {
+  margin:5px 0px;
+  font-size:30px;
+  font-weight:600;
+}
+.popup .description {
+  color:#222;
+  font-size:15px;
+  padding:5px;
+}
+.Thanks .popup .dismiss-btn {
+  margin-top:15px;
+}
+ .dismiss-btn button {
+  padding:10px 20px;
+  background:#111;
+  color:#f5f5f5;
+  border:2px solid #111;
+  font-size:16px;
+  font-weight:600;
+  outline:none;
+  border-radius:10px;
+  cursor:pointer;
+  transition: all 300ms ease-in-out;
+}
+.dismiss-btn button:hover {
+  color:#111;
+  background:#f5f5f5;
+}
+.popup > div {
+  position:relative;
+  top:10px;
+  opacity:0;
+}
+.popup.active > div {
+  top:0px;
+  opacity:1;
+}
+.popup.active .icon {
+  transition: all 300ms ease-in-out 250ms;
+}
+.popup.active .title {
+  transition: all 300ms ease-in-out 300ms;
+}
+.popup.active .description {
+  transition: all 300ms ease-in-out 350ms;
+}
+.popup.active .dismiss-btn {
+  transition: all 300ms ease-in-out 400ms;
+}
+.popup p{
+  margin-top: 10%;
+  font-size: larger;
+}
+.popup img{
+  padding: 10%;
+}
